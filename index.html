@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Arquivos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .upload-form {
+            padding: 20px;
+        }
+
+        .custom-file-upload {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .btn-download {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-download:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Projetos - Linguagens Técnicas de Programação</h1>
+        <p>Professor: Márcio Araya</p>
+        <p>Estudante: Catarina Luise</p>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Upload de Arquivos
+            </div>
+            
+            <div class="upload-form">
+                <form action="processar_upload.php" method="post" enctype="multipart/form-data">
+                    <label for="imagem" class="custom-file-upload btn">Selecionar Imagem</label>
+                    <input type="file" name="imagem" id="imagem" accept=".jpg, .jpeg, .png, .bmp" />
+                    <input type="submit" value="Enviar Imagem" class="btn btn-success btn-download">
+                </form>
+                
+                <form action="processar_upload.php" method="post" enctype="multipart/form-data">
+                    <label for="pdf" class="custom-file-upload btn">Selecionar PDF</label>
+                    <input type="file" name="pdf" id="pdf" accept=".pdf" />
+                    <input type="submit" value="Enviar PDF" class="btn btn-success btn-download">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
